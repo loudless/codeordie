@@ -1,0 +1,189 @@
+.slide {
+	width: 1000px;
+	height: 100%;
+	display: inline-block;
+	font-size: 16px;
+	overflow: hidden;
+
+	&-slick {
+		width: 100%;
+		height: 100%;
+		background: red;
+
+		&s {
+			z-index: 1000;
+			position: absolute;
+		}
+	}
+
+	&._1 {
+		position: absolute;
+		left: 0;
+	}
+
+	&._2 {
+		position: absolute;
+		left: 100%;
+		border-color: black;
+	}
+
+	&._3 {
+		position: absolute;
+		left: 200%;
+	}
+
+	&._4 {
+		position: absolute;
+		left: 300%;
+	}
+
+	&._5 {
+		position: absolute;
+		left: 400%;
+	}
+
+	&._6 {
+		position: absolute;
+		left: 500%;
+	}
+
+	&._7 {
+		position: absolute;
+		left: 600%;
+	}
+
+	&__img {
+		position: absolute;
+		top: 200px;
+		right: -100%;
+		transition: right 500ms;
+		transition-delay: 500ms;
+
+		._animate & {
+			right: 0;
+		}
+
+		@media (max-width: 1024px) {
+			._animate & {
+				right: 20px;
+			}
+		}
+	}
+
+	h2 {
+		margin-bottom: 35px;
+		line-height: 50px;
+	}
+
+	&__desc {
+		// font-family: @ideal;
+		color: rgba(255, 255, 255, 0.85);
+		font-size: 20px;
+		font-weight:300;
+		line-height: 34px;
+		width: 480px;
+		position: relative;
+		transition: left 400ms ease-out;
+		left: 140%;
+
+		._animate & {
+			left: 0;
+		}
+	}
+
+	&__col {
+		display: inline-block;
+		vertical-align: top;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 300;
+		line-height: 26px;
+		width: 175px;
+		margin-left: 40px;
+		position: relative;
+		left: 150%;
+		transition: left 500ms;
+
+		._animate & {
+			left: 0;
+		}
+
+		&:nth-child(2) {
+			transition-delay: 0ms;
+		}
+
+		&:nth-child(3) {
+			transition-delay: 200ms;
+		}
+
+		&:nth-child(4) {
+			transition-delay: 400ms;
+		}
+
+		img {
+			position: absolute;
+			right: 100%;
+			margin-right: 10px;
+		}
+	}
+
+	&__down {
+		position: fixed;
+		color: #9fbaf9;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 34px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 35px;
+		text-align: center;
+		border-radius: 50px;
+		width: 258px;
+		text-align: center;
+		background: url('../images/mouse.png') no-repeat left 25px center;
+		background-color: #33497f;
+		padding: 10px 3px 10px 57px;
+
+		opacity: 0;
+		transition: opacity 1000ms;
+		transition-delay: 1s;
+
+		.page._1 & {
+			opacity: 1;
+		}
+	}
+
+	&__links {
+		font-family: @ideaL;
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 34px;
+		margin-top: 200px;
+
+		a {
+			color: #fff;
+			margin: 0 5px;
+		}
+	}
+
+	&__form {
+		position: relative;
+		transition: left 500ms;
+		left: 150%;
+
+		._animate & {
+			left: 0;
+		}
+	}
+
+	&__form .button {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+}
+
+
+
+

@@ -1,0 +1,78 @@
+extends jade/layouts/index
+
+block content
+	header.header
+		.header__share 
+			a(href="#") Поделиться 
+			span.header__share-num 142
+		.header__logo codeordie
+		.header__slogan 
+			| Изучение программирования
+			br
+			| может быть интересным
+		a(href="#").header__lang English
+
+	.back
+	+progress
+	.slide-slicks(onclick="return {slickScroll: {}}").js-widget
+		.slide-slicks__wrap
+			.slide-slick._1 
+				.content
+					h2.title.align-center Двигайся к своей цели, играя
+				.slide-slick__down Прокрути ниже
+			.slide-slick._2 
+				.content
+					h2.title codeordie — игра, которая
+						br
+						| научит тебя программировать
+					.slide-slick__col 
+						img(src="images/icon_1.png")
+						| Игровой мир делает интересным изучение сложных вещей 
+					.slide-slick__col 
+						img(src="images/icon_2.png")
+						| Сжатая теория и увлекательная практика дадут быстрый результат
+					.slide-slick__col 
+						img(src="images/icon_3.png")
+						| Проверь свои знания в онлайн-турнирах, сражаясь против реальных кодеров
+
+			.slide-slick._3 
+				.content
+					h2.title Выбери свой язык 
+						br 
+						| программирования
+					.slide-slick__desc Начни с наиболее удобного тебе языка, а если ты не знаешь какой подойдёт тебе лучше — мы с радостью подскажем!
+					img.slide-slick__img(src="images/img_1.png")
+			.slide-slick._4 
+				.content
+					h2.title Проходи квесты
+						br
+						| и получай знания
+					.slide-slick__desc Перед каждым заданием тебя ждёт вводный теоретический курс, который поможет разобраться со всеми трудностями.
+					img.slide-slick__img(src="images/img_2.png")
+			.slide-slick._5 
+				.content
+					h2.title Участвуй в турнирах
+						br
+						| за реальные призы
+					.slide-slick__desc Специальные турниры и квесты, созданные нашими партнёрами, в которых можно выиграть крутую вакансию или вполне материальный приз.
+					img.slide-slick__img(src="images/img_3.png")
+			.slide-slick._6 
+				.content
+					h2.title Покажи свой уровень
+						br
+						| в онлайн битвах
+					.slide-slick__desc В битвах ты можешь сразиться с реальными игроками и участвовать в общем рейтинге игроков
+					img.slide-slick__img(src="images/img_4.png")
+			.slide-slick._7  
+				.content
+					h2.title.align-center Оставь свою почту и мы пришлём
+						br 
+						| тебе инвайт, когда всё будет готово
+						.slide-slick__form
+							input.input(type="email", placeholder="Твой email")
+							button.button(type="submit") Получить инвайт
+
+						.slide-slick__links
+							a(href="#") Для прессы
+							a(href="#") FAQ
+							a(href="#") Контакты

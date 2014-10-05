@@ -1,0 +1,108 @@
+html {
+	height: 100%;
+    overflow: hidden;
+}
+body {
+	height: 100%;
+	font: @fontSize @fontFamily;
+	line-height: @lineHeight;
+	color: @fontColor;
+}
+
+* {
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+
+@font-face {
+    font-family: 'museo_cyrl500';
+    src: url('@{fontPath}museo_cyrillic_500-webfont.eot');
+    src: url('@{fontPath}museo_cyrillic_500-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@{fontPath}museo_cyrillic_500-webfont.woff') format('woff'),
+         url('@{fontPath}museo_cyrillic_500-webfont.ttf') format('truetype'),
+         url('@{fontPath}museo_cyrillic_500-webfont.svg#museo_cyrl500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+// @font-face {
+//     font-family: 'idealist';
+//     src: url('@{fontPath}idealist_sans_light-webfont.eot');
+//     src: url('@{fontPath}idealist_sans_light-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('@{fontPath}idealist_sans_light-webfont.woff') format('woff'),
+//          url('@{fontPath}idealist_sans_light-webfont.ttf') format('truetype'),
+//          url('@{fontPath}idealist_sans_light-webfont.svg#idealist_sanslight') format('svg');
+//     font-weight: 100;
+//     font-style: normal;
+
+// }
+
+// @font-face {
+//     font-family: 'idealist';
+//     src: url('@{fontPath}glen_jan_-_idealistsans-webfont.eot');
+//     src: url('@{fontPath}glen_jan_-_idealistsans-webfont.eot?#iefix') format('embedded-opentype'),
+//          url('@{fontPath}glen_jan_-_idealistsans-webfont.woff') format('woff'),
+//          url('@{fontPath}glen_jan_-_idealistsans-webfont.ttf') format('truetype'),
+//          url('@{fontPath}glen_jan_-_idealistsans-webfont.svg#idealist_sansregular') format('svg');
+//     font-weight: 400;
+//     font-style: normal;
+
+// }
+
+@font-face {
+    font-family: 'Idealist';
+    src: local('Idealist Sans'), local('IdealistSans'), url('http://64424.selcdn.ru/webfont/idealist/idealist.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Idealist';
+    src: local('Idealist Sans'), local('IdealistSans-Light'), url('http://64424.selcdn.ru/webfont/idealist/idealist-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* LINK */
+a {
+	color: @linkColor;
+}
+a:hover, a:focus, a:active {
+	color: @linkHoverColor;
+}
+
+/* HEADER */
+h1 {
+	margin: 0;
+	font-size: 36px;
+	font-weight: normal;
+}
+h2 {
+	margin: 0;
+	font-size: 28px;
+	font-weight: normal;
+}
+h3 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+/* TEXT */
+p, 
+ul, 
+ol {
+	margin: 0 0 1em;
+}
+
+
+.chromeperfectpixel-overlay {
+	-webkit-filter: invert();
+}
+
+

@@ -1,0 +1,87 @@
+extends jade/layouts/index
+
+block content
+	header.header
+		.header__share 
+			a(href="#") Поделиться 
+			span.header__share-num 142
+		.header__logo codeordie
+		.header__slogan 
+			| Изучение программирования
+			br
+			| может быть интересным
+		a(href="#").header__lang English
+
+	.back
+	+progress
+	.scroll.slides(onclick="return {slideScroll: {}}").js-widget
+		.slides__wrap
+			.slide._1 
+				.content
+					h2.title.align-center Двигайся к своей цели, играя
+				.slide__down Прокрути ниже
+			.slide._2 
+				.content
+					h2.title codeordie — игра, которая
+						br
+						| научит тебя программировать
+					.slide__col 
+						img(src="images/icon_1.png")
+						| Игровой мир делает интересным изучение сложных вещей 
+					.slide__col 
+						img(src="images/icon_2.png")
+						| Сжатая теория и увлекательная практика дадут быстрый результат
+					.slide__col 
+						img(src="images/icon_3.png")
+						| Проверь свои знания в онлайн-турнирах, сражаясь против реальных кодеров
+
+			.slide._3 
+				.content
+					h2.title Выбери свой язык 
+						br 
+						| программирования
+					.slide__desc Начни с наиболее удобного тебе языка, а если ты не знаешь какой подойдёт тебе лучше — мы с радостью подскажем!
+					img.slide__img(src="images/img_1.png")
+			.slide._4 
+				.content
+					h2.title Проходи квесты
+						br
+						| и получай знания
+					.slide__desc Перед каждым заданием тебя ждёт вводный теоретический курс, который поможет разобраться со всеми трудностями.
+					img.slide__img(src="images/img_2.png")
+			.slide._5 
+				.content
+					h2.title Участвуй в турнирах
+						br
+						| за реальные призы
+					.slide__desc Специальные турниры и квесты, созданные нашими партнёрами, в которых можно выиграть крутую вакансию или вполне материальный приз.
+					img.slide__img(src="images/img_3.png")
+			.slide._6 
+				.content
+					h2.title Покажи свой уровень
+						br
+						| в онлайн битвах
+					.slide__desc В битвах ты можешь сразиться с реальными игроками и участвовать в общем рейтинге игроков
+					img.slide__img(src="images/img_4.png")
+			.slide._7  
+				.content
+					h2.title.align-center Оставь свою почту и мы пришлём
+						br 
+						| тебе инвайт, когда всё будет готово
+						.slide__form
+							input.input(type="email", placeholder="Твой email")
+							button.button(type="submit") Получить инвайт
+
+						.slide__links
+							a(href="#") Для прессы
+							a(href="#") FAQ
+							a(href="#") Контакты
+
+	//- div#fullpage
+		.section
+		.section
+		.section
+		.section
+		.section
+		.section
+		.section

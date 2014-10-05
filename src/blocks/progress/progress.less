@@ -1,0 +1,171 @@
+.progress {
+	display: none;
+	position: fixed;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -190px;
+	z-index: 2;
+
+	&__container {
+		width: 364px;
+		height: 40px;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		border-radius: 50px;
+		overflow: hidden;
+		position: relative;
+		border: 7px solid rgba(255, 255, 255, 0.12);
+		box-sizing: content-box;
+		transition: background @tDuration;
+
+		._1 & { 
+			background-color: #415996;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #415996;
+			}
+		}
+
+		._2 & {
+			background-color: #415996;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #415996;
+			}
+		}
+
+		._3 & {
+			background-color: #574196;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #574196;
+			}
+		}
+
+		._4 & {
+			background-color: #96415d;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #96415d;
+			}
+		}
+
+		._5 & {
+			background-color: #1d9b40;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #1d9b40;
+			}
+		}
+
+		._6 & {
+			background-color: #417d96;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #417d96;
+			}
+		}
+
+		._7 & {
+			background-color: #e98d3a;
+
+			&:after {
+				box-shadow: inset 0px 0px 0px 3px #e98d3a;
+			}
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 0;
+			right: 0;
+			margin: auto;
+			width: 332px;
+			height: 11px;
+			background: rgba(255, 255, 255, 0.34);
+			border-radius: 11px;
+			z-index: 3;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: 50px;
+			box-shadow: inset 0px 0px 0px 3px #415996;
+			z-index: 4;
+			transition: box-shadow @tDuration;
+		}
+	}
+
+	@-webkit-keyframes mymove {
+	    0% {background-position: 0 0; }
+	    50% {background-position: 10px -36px; }
+	    100% {background-position: 0 -72px;}
+	}
+
+	&__bar {
+		position: absolute;
+		left: 1px;
+		top: 1px;
+		bottom: 1px;
+		width: 0;
+		background: red;
+		transition: width 1000ms, background-color 1000ms, background-position 1000ms;
+		background-image: url("../images/bubbles.png");
+		background-position: center center;
+		background-position: 0 0px;
+
+		 -webkit-animation: mymove 1500ms infinite linear;
+		 -webkit-animation-duration: 1500ms;
+		
+		._1 & { 
+			background-color: #50ace6;
+			background-position: center 100%;
+		}
+
+		._2 & {
+			background-color: #50e6af;
+			background-position: center 1110%;
+		}
+
+		._3 & {
+			background-color: #8ce650;
+			background-position: center 1540%;
+		}
+
+		._4 & {
+			background-color: #e6da50;
+			background-position: center 2180%;
+		}
+
+		._5 & {
+			background-color: #ffac41;
+			background-position: center 3450%;
+		}
+
+		._6 & {
+			background-color: #ff6541;
+			background-position: center 4100%;
+		}
+
+		._7 & {
+			background-color: #8d67d3;
+			background-position: center 5550%;
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+

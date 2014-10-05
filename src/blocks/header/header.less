@@ -1,0 +1,88 @@
+.header {
+	position: fixed;
+	width: 1000px;
+	height: 120px;
+	top: 35px;
+	left: 50%;
+	margin-left: -500px;
+	z-index: 5;
+	text-align: center;
+
+	@media (max-width: 1024px) {
+		left: 20px;
+		right: 20px;
+		margin: 0;
+		width: auto;
+	}
+
+	&__logo {
+		// font-family: JournalSansC;
+		color: #ffffff;
+		font-size: 27px;
+		font-weight: 700;
+		line-height: 32px;
+	}
+
+	&__slogan {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+
+		font-family: @ideaL;
+		// font-family: IdealistSans;
+		// color: #9ce4ff;
+		color: #9ce4ff;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 32px;
+
+	}
+
+	&__share {
+		border-radius: 5px;
+		border-radius: 5px;
+		border-width: 2px;
+		border-color: rgba(255, 255, 255, 0.2);
+		border-style: solid;
+
+		font-family: @ideaL;
+		color: #ffffff;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 26px;
+		padding: 0 10px;
+		position: relative;
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+		}
+
+		&-num {
+			position: absolute;
+			left: 100%;
+			top: 0;
+			margin-left: 10px;
+		}
+	}
+
+	&__lang {
+		// font-family: IdealistSans;
+		// color: #90abf0;
+		position: absolute;
+		right: 0;
+		top: 10px;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 26px;
+		color: #90abf0;
+	}
+
+	&__share {
+		position: absolute;
+		left: 0;
+		top: 10px;
+	}
+}
