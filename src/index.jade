@@ -11,13 +11,15 @@ block content
 			br
 			| может быть интересным
 		a(href="#").header__lang English
+		.header__get-invite
+			button.button._blue(type="submit") Получить инвайт
 
 	.back
 	+progress
 	.scroll.slides(onclick="return {slideScroll: {}}").js-widget
 		.slides__wrap
 			.slide._1 
-				.content
+				.content._first
 					h2.title.align-center Двигайся к своей цели, играя
 				.slide__down Прокрути ниже
 			.slide._2 
@@ -64,7 +66,7 @@ block content
 					.slide__desc В битвах ты можешь сразиться с реальными игроками и участвовать в общем рейтинге игроков
 					img.slide__img(src="images/img_4.png")
 			.slide._7  
-				.content
+				.content._last
 					h2.title.align-center Оставь свою почту и мы пришлём
 						br 
 						| тебе инвайт, когда всё будет готово

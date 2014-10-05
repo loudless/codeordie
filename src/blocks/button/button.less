@@ -5,9 +5,30 @@
 	color: #fff600;
 	font-size: 18px;
 	font-weight: 500;
-	line-height: 38px;
-	border: 1px solid;
+	line-height: 33px;
+	border: 2px solid;
 	padding: 0;
 	background: none;
 	border-radius: 50px;
+
+	&._blue {
+		color: #3efff4;
+		border-color: #3efff4;
+	}
+
+	&:hover {
+		background-color: rgba(79, 48, 24, 0.5);
+		box-shadow: 0px 0px 25px -5px #ffd74e;
+	}
+
+	&:active {
+		color:  #965f41;
+		background-color: #fff;
+		border-color: #fff;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
 }
