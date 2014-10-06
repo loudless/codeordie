@@ -69,8 +69,8 @@ block content
 						br 
 						| тебе инвайт, когда всё будет готово
 						.slide__form
-							input.input(type="email", placeholder="Твой email")
-							button.button(type="submit") Получить инвайт
+							input.input.js-widget(type="email", placeholder="Твой email", onclick="return {input: {}}")
+							button(type="submit", onclick="return {button: {}}").button.js-widget Получить инвайт
 
 						.slide__links
 							a(href="#") Для прессы

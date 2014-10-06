@@ -5,3 +5,5 @@ files/*
 dest/*
 
 node_modules/*
+
+.idea
