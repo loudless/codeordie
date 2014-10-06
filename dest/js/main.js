@@ -1126,6 +1126,8 @@ jQuery.extend( jQuery.easing,
 	},
 
 	_handleSlideChange: function (e, slide, total) {
+		console.log(slide);
+		
 		if (slide) {
 			$('.slide__down').hide();
 			this.element.fadeIn();

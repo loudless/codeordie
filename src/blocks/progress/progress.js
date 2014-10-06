@@ -14,6 +14,8 @@ $.widget('codeordie.progress', {
 	},
 
 	_handleSlideChange: function (e, slide, total) {
+		console.log(slide);
+		
 		if (slide) {
 			$('.slide__down').hide();
 			this.element.fadeIn();
