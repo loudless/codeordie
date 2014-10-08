@@ -1,9 +1,4 @@
 *.orig
-
-files/*
-
-dest/*
-
 node_modules/*
-
+dest
 .idea

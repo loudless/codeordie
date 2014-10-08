@@ -1,0 +1,36 @@
+{
+  "files": [{
+    "source": "../images/back_01.png",
+    "type": "IMAGE",
+    "size": 121.426
+  }, {
+    "source": "../images/back_02.png",
+    "type": "IMAGE",
+    "size": 110.680
+  }, {
+    "source": "../images/back_03.png",
+    "type": "IMAGE",
+    "size": 91.801
+  }, {
+    "source": "../images/back_04.png",
+    "type": "IMAGE",
+    "size": 80.160
+  }, {
+    "source": "../images/back_05.png",
+    "type": "IMAGE",
+    "size": 78.654
+  }, {
+    "source": "../images/back_06.png",
+    "type": "IMAGE",
+    "size": 81.225
+  }, {
+    "source": "../images/back_07.png",
+    "type": "IMAGE",
+    "size": 91.346
+  }, {
+    "source": "../css/main.css",
+    "type": "CSS",
+    "size": 21.580
+  }
+  ]
+}

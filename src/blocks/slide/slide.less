@@ -55,7 +55,7 @@
 
 	&__img {
 		position: absolute;
-		top: 200px;
+		top: 250px;
 		right: -100%;
 		transition: right 500ms;
 		transition-delay: 500ms;
@@ -161,7 +161,24 @@
 		font-size: 20px;
 		font-weight: 400;
 		line-height: 34px;
-		margin-top: 200px;
+		margin-top: 100px;
+		display: none;
+
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 115px;
+		opacity: 0;
+
+		transition: opacity 500ms;
+
+		.page._6 &, .page._7 & {
+			display: block;
+		}
+
+		.page._7 & {
+			opacity: 1;
+		}
 
 		a {
 			color: #fff;
@@ -170,6 +187,7 @@
 	}
 
 	&__form {
+		margin-top: 50px;
 		position: relative;
 		transition: left 500ms;
 		left: 150%;
