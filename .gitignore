@@ -1,5 +1,4 @@
 *.orig
-
-files/*
-
 node_modules/*
+dest
+.idea
