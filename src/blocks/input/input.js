@@ -20,8 +20,13 @@ $.widget('codeordie.input', {
         $.subscribe('save', $.proxy(this._save, this));
     },
 
+    /**
+     * @param e
+     * @param data
+     * @private
+     */
     _save: function (e, data) {
-        console.log('Hello');
+        this.$email.removeClass('success error');
         var config = this._config;
         var url = config.ssl ? 'https://' + config.domain : 'http://' + config.domain + '/' + config.method;
         if (this._validate()) {
@@ -30,22 +35,36 @@ $.widget('codeordie.input', {
                 url: url,
                 cache: false,
                 crossDomain: true,
-                data: {email: this.$email.val()},
-                success: this._success
+                data: {email: this.$email.val(), ip: ip, referrer: document.referrer},
+                success: $.proxy(this._success, this)
             });
+        } else {
+            this._error();
         }
     },
 
-    _success: function (result  ) {
+    /**
+     * @param result
+     * @private
+     */
+    _success: function (result) {
+        this.$email.addClass('success');
         console.log(result);
     },
 
     /**
-     * @todo Добавить проверку на email
      * @private
      */
     _validate: function () {
-        return true;
+        var filter = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return filter.test(this.$email.val());
+    },
+
+    /**
+     * @private
+     */
+    _error: function () {
+        this.$email.addClass('error');
     }
 
 });
