@@ -617,7 +617,7 @@ body {
 		50% 50%,
 		50% 50%,
 		50% 50%;
-	background-image: url("../images/parallax/1.png"), url("../images/parallax/fence_front.png"), url("../images/parallax/2.png"), url("../images/parallax/fence_back.png"), url("../images/parallax/nature.png"), url("../images/parallax/static.png"), url("../images/parallax/city_back.png");
+	background-image: url("../images/parallax/fence_front.png"), url("../images/parallax/1.png"), url("../images/parallax/2.png"), url("../images/parallax/fence_back.png"), url("../images/parallax/nature.png"), url("../images/parallax/static.png"), url("../images/parallax/city_back.png");
 }
 
 .button {
@@ -913,6 +913,8 @@ body {
 }
 
 .page._2 .back {
+	-webkit-transition: background-position 500ms;
+	transition: background-position 500ms;
 	background-color: #415996;
 	background-image: url("../images/back_02.png");
 }
