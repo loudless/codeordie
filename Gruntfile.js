@@ -44,8 +44,7 @@ module.exports = function (grunt) {
                     "src/js/core.js",
                     "src/js/plugins/*.js",
                     "src/blocks/**/*.js",
-                    "src/js/initial.js",
-                    "src/js/geoip.js"
+                    "src/js/initial.js"
                 ],
                 dest: 'dest/js/main.js'
             }

@@ -12,7 +12,6 @@ $.widget('codeordie.input', {
 
     _create: function () {
         this._initEvents();
-        this._initGeoIp();
         this.$email = $(this.element)
     },
 
@@ -38,10 +37,10 @@ $.widget('codeordie.input', {
                 type: config.type,
                 url: url,
                 cache: false,
+                error: $.proxy(this._error, this),
                 crossDomain: true,
                 data: { email: this.$email.val(),
-                        ip: ip, referrer: document.referrer,
-                        city: this._city, country: this._country },
+                        ip: ip, referrer: document.referrer},
 
                 success: $.proxy(this._success, this)
             });
@@ -72,17 +71,6 @@ $.widget('codeordie.input', {
      */
     _error: function () {
         this.$email.addClass('error');
-    },
-
-    _initGeoIp: function () {
-        var _this = this;
-        geoip2.city(function (location) {
-            _this._country = location.country.names.ru
-            _this._city = location.city.names.ru
-        }, function (error) {
-            _this._country = '';
-            _this._city = '';
-        });
     }
 
 });
