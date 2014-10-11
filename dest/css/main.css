@@ -729,6 +729,14 @@ body {
 .input:focus {
   outline: none;
 }
+.input.success {
+  background: #07A32D;
+  color: #ffffff;
+}
+.input.error {
+  background: #D41E51;
+  color: #ffffff;
+}
 .loader {
   position: fixed;
   background: rgba(0, 0, 0, 0.9);

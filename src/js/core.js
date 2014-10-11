@@ -43,7 +43,7 @@
 		// возвращаем в исходное состояние
 		$.publish = function () {
 			pubsub.trigger.apply(pubsub, arguments);
-		};;
+		};
 
 		// вызываем "скопившиеся" опубликованные события
 		$.each(pubStack, function () {

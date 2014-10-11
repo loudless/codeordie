@@ -1,5 +1,5 @@
 *.orig
-
-files/*
-
 node_modules/*
+dest
+.idea
+.DS_Store
