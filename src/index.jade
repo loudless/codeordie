@@ -15,7 +15,7 @@ block content
 		.header__get-invite
 			button.button._blue(type="submit") Получить инвайт
 
-	.back
+	.back(onclick="return {back: {}}").js-widget
 	+progress
 	.scroll.slides(onclick="return {slideScroll: {}}").js-widget
 		.slides__wrap
