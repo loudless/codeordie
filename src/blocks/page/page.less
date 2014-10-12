@@ -10,11 +10,13 @@
 	// }
 
 	&._1 .back { 
-		background-color: #415996;
-		background-image: url("../images/back_01.png");
+		// background-color: #415996;
+		// background-image: url("../images/back_01.png");
+		transition: none;
 	}
 
 	&._2 .back {
+		transition: background-position @tDuration;
 		background-color: #415996;
 		background-image: url("../images/back_02.png");
 	}
