@@ -24,6 +24,8 @@ $.widget('codeordie.slideScroll', {
         this.$slide = this.element.find('.slide');
         this.$slides__wrap = this.element.find('.slides__wrap');
         // this.$slides = this.element;
+
+        this.lastPosition = this.element.offset().left;
     },
 
     _initEvents: function () {
@@ -64,11 +66,38 @@ $.widget('codeordie.slideScroll', {
             var top = (width * (self.currentSlide ));
             self.$slidesContainer.offset({left: -top});
         });
+
+        // drag 
+        var elem = document.querySelector('#slideWrap');
+        var draggie = new Draggabilly( elem, {
+          axis: 'x'
+        });
+
+        // console.log(this.element.offset().left, this.currentSlide);
+
+        draggie.on( 'dragEnd', function( draggieInstance, event, pointer ) {
+            var newPosition = self.element.offset().left;
+            
+            if (newPosition < self.lastPosition) {
+                // console.log('left');
+                self._handleScroll(null, -1);
+            } else {
+                // console.log('right');
+                self._handleScroll(null, 1);
+            }
+
+            // console.log(self.lastPosition, newPosition);
+
+            self.lastPosition = newPosition;
+
+        });
     },
 
-    _handleScroll: function (e) {
+    _handleScroll: function (e, direction) {
+
+        direction = direction ? direction : e.deltaY;
         
-        var direction = e.deltaY;
+        // var direction = e.deltaY;
         var top;
 
         // скроллим вниз
@@ -85,11 +114,14 @@ $.widget('codeordie.slideScroll', {
         // не прокручиваем slidesContainer ваше начала сайта
         if (this.currentSlide < 0) {
             this.currentSlide = 0;
+            this._scroll(0);
             return;
         }
             // не прокручиваем slidesContainer ниже конца сайта
         else if (this.currentSlide >= this.$slides.length) {
             this.currentSlide = this.$slides.length;
+
+            this._scroll(this.width * (this.currentSlide - 1 ));
             return;
         }
 
@@ -189,6 +221,9 @@ $.widget('codeordie.slideScroll', {
             self._on({
                 'mousewheel': self._handleScroll
             });
+
+            //обновляем положение 
+            self.lastPosition = self.element.offset().left;
 
             if ($.isFunction(animationCallback)) {
                 animationCallback.call(self);
