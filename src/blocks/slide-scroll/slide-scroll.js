@@ -30,7 +30,8 @@ $.widget('codeordie.slideScroll', {
 
     _initEvents: function () {
         this._on({
-            'mousewheel': this._handleScroll
+            'mousewheel': this._handleScroll,
+            'keyup input': this._handleInputKeyUp
         });
 
         this.$document.on('keyup', $.proxy(this._handleDocKeyUp, this));
@@ -101,6 +102,10 @@ $.widget('codeordie.slideScroll', {
             
 
         });
+    },
+
+    _handleInputKeyUp: function (e) {
+        e.stopPropagation();
     },
 
     _handleScroll: function (e, direction) {
