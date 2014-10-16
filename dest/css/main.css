@@ -207,6 +207,8 @@ table {
 html {
 	height: 100%;
 	overflow: hidden;
+	min-width: 1024px;
+	min-height: 800px;
 }
 
 body {
@@ -1170,7 +1172,7 @@ body {
 
 .slide {
 	width: 1000px;
-	min-width: 1000px;
+	min-width: 1024px;
 	height: 100%;
 	display: inline-block;
 	font-size: 16px;

@@ -77,18 +77,28 @@ $.widget('codeordie.slideScroll', {
 
         draggie.on( 'dragEnd', function( draggieInstance, event, pointer ) {
             var newPosition = self.element.offset().left;
-            
-            if (newPosition < self.lastPosition) {
-                // console.log('left');
-                self._handleScroll(null, -1);
+
+            console.log(draggieInstance.dragPoint.x);
+
+            if (draggieInstance.dragPoint.x < 10 && draggieInstance.dragPoint.x > -10 ) {
+                self.element.offset.left = self.lastPosition;
+
+                $(event.target).focus();
+
             } else {
-                // console.log('right');
-                self._handleScroll(null, 1);
+                if (newPosition < self.lastPosition) {
+                    // console.log('left');
+                    self._handleScroll(null, -1);
+                } else {
+                    // console.log('right');
+                    self._handleScroll(null, 1);
+                }
+
+                // console.log(self.lastPosition, newPosition);
+
+                self.lastPosition = newPosition;
             }
-
-            // console.log(self.lastPosition, newPosition);
-
-            self.lastPosition = newPosition;
+            
 
         });
     },
