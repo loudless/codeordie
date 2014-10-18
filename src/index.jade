@@ -3,9 +3,18 @@ extends jade/layouts/index
 block content
 	header.header
 		.header__share 
-			a(href="#") Поделиться 
+			//- a(href="#") Поделиться 
 			span.header__share-num 142
 				span
+
+			.social-likes.social-likes_single(data-single-title="Поделиться")#share
+				.facebook(title="Поделиться ссылкой на Фейсбуке") Facebook
+				.twitter(title="Поделиться ссылкой в Твиттере") Twitter
+				.mailru(title="Поделиться ссылкой в Моём мире") Мой мир
+				.vkontakte(title="Поделиться ссылкой во Вконтакте") Вконтакте
+				.odnoklassniki(title="Поделиться ссылкой в Одноклассниках") Одноклассники
+				.plusone(title="Поделиться ссылкой в Гугл-плюсе") Google+
+
 		.header__logo codeordie
 		.header__slogan 
 			| Изучение программирования
