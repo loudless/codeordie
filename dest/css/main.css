@@ -757,6 +757,9 @@ body {
 	border: 2px solid rgba(0, 0, 0, 0.1);
 	border-radius: 5px;
 	padding: 1px 11px;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
 }
 
 .header__share-num:before {
@@ -1022,69 +1025,6 @@ body {
 	transition: background 500ms;
 }
 
-._1 .progress__container {
-	background-color: #415996;
-}
-
-._1 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #415996;
-	box-shadow: inset 0px 0px 0px 3px #415996;
-}
-
-._2 .progress__container {
-	background-color: #415996;
-}
-
-._2 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #415996;
-	box-shadow: inset 0px 0px 0px 3px #415996;
-}
-
-._3 .progress__container {
-	background-color: #574196;
-}
-
-._3 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #574196;
-	box-shadow: inset 0px 0px 0px 3px #574196;
-}
-
-._4 .progress__container {
-	background-color: #96415d;
-}
-
-._4 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #96415d;
-	box-shadow: inset 0px 0px 0px 3px #96415d;
-}
-
-._5 .progress__container {
-	background-color: #1d9b40;
-}
-
-._5 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #1d9b40;
-	box-shadow: inset 0px 0px 0px 3px #1d9b40;
-}
-
-._6 .progress__container {
-	background-color: #417d96;
-}
-
-._6 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #417d96;
-	box-shadow: inset 0px 0px 0px 3px #417d96;
-}
-
-._7 .progress__container {
-	background-color: #e98d3a;
-}
-
-._7 .progress__container:after {
-	-webkit-box-shadow: inset 0px 0px 0px 3px #e98d3a;
-	box-shadow: inset 0px 0px 0px 3px #e98d3a;
-}
-
 .progress__container:before {
 	content: '';
 	position: absolute;
@@ -1099,33 +1039,20 @@ body {
 	z-index: 3;
 }
 
-.progress__container:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	border-radius: 50px;
-	-webkit-box-shadow: inset 0px 0px 0px 3px #415996;
-	box-shadow: inset 0px 0px 0px 3px #415996;
-	z-index: 4;
-	-webkit-transition: -webkit-box-shadow 500ms;
-	transition: box-shadow 500ms;
-}
-
 .progress__bar {
 	position: absolute;
-	left: 1px;
-	top: 1px;
-	bottom: 1px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
 	width: 0;
 	background: red;
-	-webkit-transition: width 1000ms, background-color 1000ms, background-position 1000ms;
-	transition: width 1000ms, background-color 1000ms, background-position 1000ms;
+	-webkit-transition: width 1000ms, background-color 1000ms, background-position 1000ms, border 500ms;
+	transition: width 1000ms, background-color 1000ms, background-position 1000ms, border 500ms;
 	background-image: url("../images/bubbles_3.png");
 	background-position: center center;
 	background-position: 0 0px;
+	border-radius: 50px 50px 50px 50px;
+	max-width: 100%;
 	-webkit-animation: mymove 1500ms infinite linear;
 	-webkit-animation-duration: 1500ms;
 }
@@ -1133,36 +1060,43 @@ body {
 ._1 .progress__bar {
 	background-color: #50ace6;
 	background-position: center 100%;
+	border: 3px solid #415996;
 }
 
 ._2 .progress__bar {
 	background-color: #50e6af;
 	background-position: center 1110%;
+	border: 3px solid #415996;
 }
 
 ._3 .progress__bar {
 	background-color: #8ce650;
 	background-position: center 1540%;
+	border: 3px solid #574196;
 }
 
 ._4 .progress__bar {
 	background-color: #e6da50;
 	background-position: center 2180%;
+	border: 3px solid #96415d;
 }
 
 ._5 .progress__bar {
 	background-color: #ffac41;
 	background-position: center 3450%;
+	border: 3px solid #1d9b40;
 }
 
 ._6 .progress__bar {
 	background-color: #ff6541;
 	background-position: center 4100%;
+	border: 3px solid #417d96;
 }
 
 ._7 .progress__bar {
 	background-color: #8d67d3;
 	background-position: center 5550%;
+	border: 3px solid #e98d3a;
 }
 
 .slide {
@@ -1566,10 +1500,6 @@ body {
 	border-radius: 3px;
 }
 
-.social-likes__button.social-likes__button_single:hover {
-	background: rgba(255, 255, 255, 0.1);
-}
-
 .social-likes__button {
 	padding: 1px 6px 1px 6px;
 	font-weight: 400;
@@ -1582,6 +1512,23 @@ body {
 	margin-top: 1px;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+}
+
+span.social-likes__counter.social-likes__counter_single {
+	position: absolute !important;
+	left: 100%;
+	top: -2px;
+	height: 34px;
+	margin-left: 15px;
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 1px 11px;
+	border-left-color: transparent !important;
+	line-height: 27px;
+}
+
+span.social-likes__counter.social-likes__counter_single:before {
+	content: none !important;
 }
 
 .social-likes__counter {

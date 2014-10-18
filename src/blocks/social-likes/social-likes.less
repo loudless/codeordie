@@ -186,7 +186,7 @@
      border-radius: 3px;
 
     &:hover {
-        background: rgba(255, 255, 255, 0.1);
+        // background: rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -205,12 +205,107 @@
     background-position: 50% 50%;
 }
 
+span.social-likes__counter.social-likes__counter_single {
+
+        position: absolute !important;
+        left: 100%;
+        top: -2px;
+        height: 34px;
+        margin-left: 15px;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 1px 11px;
+        border-left-color: transparent !important;
+        line-height: 27px;
+
+        &:before {
+            content: none !important;
+        }
+}
+
 .social-likes__counter {
     min-width: 12px;
     padding: 1px 4px;
     font-weight: 400;
     text-align: center;
     border-left: 1px solid #ccc;
+
+        // position: absolute;
+        // left: 100%;
+        // top: 0px;
+        // height: 34px;
+        // margin-left: 13px;
+        // border: 2px solid rgba(0,0,0,0.1);
+        // border-radius: 5px;
+        // padding: 1px 11px;
+
+        // &:before {
+        //     content: '';
+        //     width: 0;
+        //     height: 0;
+        //     border: 7px solid rgba(0,0,0,0.1);
+        //     border-left-color: transparent;
+        //     border-top-color: transparent;
+        //     border-bottom-color: transparent;
+        //     position: absolute;
+        //     right: 100%;
+        //     top: 0;
+        //     bottom: 0;
+        //     margin: auto;
+        //     margin-right: 2px;
+        // }
+
+        // &:after, span {
+        //     content: '';
+        //     width: 0;
+        //     height: 0;
+        //     border: 5px solid #415996;
+        //     border-left-color: transparent;
+        //     border-top-color: transparent;
+        //     border-bottom-color: transparent;
+        //     position: absolute;
+        //     right: 100%;
+        //     top: 0;
+        //     bottom: 0;
+        //     margin: auto;
+        //     margin-right: 2px;
+        //     transition: all 500ms;
+
+        //     ._1 & { 
+        //         border-right-color: #415996;
+        //     }
+
+        //     ._2 & {
+        //         border-right-color: #415996;
+        //     }
+
+        //     ._3 & {
+        //         border-right-color: #574196;
+        //     }
+
+        //     ._4 & {
+        //         border-right-color: #96415d;
+        //     }
+
+        //     ._5 & {
+        //         border-right-color: #1d9b40;
+        //     }
+
+        //     ._6 & {
+        //         border-right-color: #417d96;
+        //     }
+
+        //     ._7 & {
+        //         border-right-color: #e98d3a;
+        //     }
+        // }
+
+        // span {
+        //     width: 0px;
+        //     height: 13px;
+        //     margin-right: 0;
+        //     border-right-width: 4px;
+        // }
 }
 
 .social-likes__widget:hover > .social-likes__counter,.social-likes__widget:focus > .social-likes__counter,.social-likes__widget:active > .social-likes__counter,.social-likes__widget_active > .social-likes__counter {
