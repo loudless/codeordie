@@ -131,8 +131,21 @@ module.exports = function (grunt) {
                 flatten: true,
                 src: 'src/js/*',
                 dest: 'dest/js/'
-            }
+            },
 
+            robots: {
+                expand: true,
+                flatten: true,
+                src: 'src/robots.txt',
+                dest: 'dest/'
+            },
+
+            sitemap: {
+                expand: true,
+                flatten: true,
+                src: 'src/sitemap.xml',
+                dest: 'dest/'
+            }
         },
         watch: {
             options: {

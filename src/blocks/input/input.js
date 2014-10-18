@@ -40,7 +40,7 @@ $.widget('codeordie.input', {
                 error: $.proxy(this._error, this),
                 crossDomain: true,
                 data: { email: this.$email.val(),
-                        ip: ip, referrer: document.referrer},
+                    ip: ip, referrer: document.referrer},
 
                 success: $.proxy(this._success, this)
             });
