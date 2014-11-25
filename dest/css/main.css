@@ -612,6 +612,7 @@ body {
 	transition: background 500ms;
 	background-color: #415996;
 	background-position: center center;
+	background-repeat: repeat no-repeat;
 	background-position: 50% 50%, 
 		50% 50%, 
 		50% 50%,
